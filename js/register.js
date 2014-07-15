@@ -34,16 +34,17 @@
         });
         navigateToMenu();
 
-
     }
+    //else {
 
-    if (localStorage.getItem("MembershipNO") != undefined) {
-        $.mobile.changePage("#activationPage", {
-            transition: "flip",
-            reverse: false,
-            changeHash: true
-        });
-    }
+    //    if (localStorage.getItem("MembershipNO") != undefined) {
+    //        $.mobile.changePage("#activationPage", {
+    //            transition: "flip",
+    //            reverse: false,
+    //            changeHash: true
+    //        });
+    //    }
+    //}
 
     $("#btnRegister").click(function () {
 

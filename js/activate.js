@@ -265,6 +265,13 @@ $(document).one('pagecreate', '#activationPage', function () {
                                                   var sql2 = 'update ClubDetail set RecordStatus="Active", TokenExpiryDate="' + msg.TokenExpiryDate + '",AuthToken="' + msg.Token + '",Email="' + msg.Email + '",ICNo="' + msg.ICNo + '",DeviceID="' + msg.DeviceID + '",DeviceKey="' + msg.DeviceKey + '" where UserName="' + msg.UserName + '" ';
                                                   tx.executeSql(sql2);
                                               }
+                                              if (localStorage.getItem("Token") != "") {
+                                                  $.ajaxSetup({
+                                                      headers: {
+                                                          "Authorization": "Bearer " + localStorage.getItem("Token")
+                                                      }
+                                                  });
+                                              }
                                               navigateToMenu();
                                           }
                                           , function (err) {

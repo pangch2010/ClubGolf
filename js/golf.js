@@ -69,6 +69,12 @@ function GenerateCourseDropdownList() {
 
     });
 }
+$(document).on('pagebeforeshow', '#golf', function () {
+    GenerateDateDropDownList();
+    GenerateCourseDropdownList();
+    resetAvailabletime();
+});
+
 $(document).one('pagecreate', '#golf', function () {
     GenerateDateDropDownList();
     GenerateCourseDropdownList();
@@ -159,8 +165,7 @@ $(document).one('pagecreate', '#golf', function () {
                 }
             }
         }
-        var timeDisplay = Timevalue.split(",");
-        alert("test");
+        var timeDisplay = Timevalue.split(",");        
         $("#Confirm_Inside-Course").html(course);
         //$("#Inside-DateTime").html(DisplayDay.getDate() + "/" + (DisplayDay.getMonth() + 1) + "/" + DisplayDay.getFullYear() + " (" + weekday[DisplayDay.getDay()]+")");
         $("#Confirm_Inside-DateTime").html(DisplayDay);

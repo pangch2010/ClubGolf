@@ -29,13 +29,7 @@ function loadBooking(membershipNo) {
         data: {
             MembershipNo: membershipNo
         },
-        beforeSend: function () {
-            $.mobile.loading("show", {
-                text: "Loading",
-                textVisible: true,
-                textonly: false,
-            });
-        },
+        
         success: function (result) {
             $.mobile.loading("hide");
             if (result != null && result != "") {
@@ -59,19 +53,20 @@ function loadBooking(membershipNo) {
             }
 
         },
-        error: function () {
-            $.mobile.loading("hide");
-            alert("error");
+        fail: function (jqXHR, exception) {
+            alert(exception);
         },
     });
 }
-$(document).one("pagebeforeshow", "#myBooking", function () {
+
+$(document).on("pagebeforeshow", "#myBooking", function () {
     if (localStorage.getItem("ClubMemberID") != null) {
         clubMemberID = localStorage.getItem("ClubMemberID");
     }
     if (localStorage.getItem("MembershipNo") != null) {
         membershipNo = localStorage.getItem("MembershipNo");
     }
+
     loadBooking(membershipNo);
 
     $(document).off('click', '.cancelBookingButton').on('click', '.cancelBookingButton', function (e) {
@@ -115,10 +110,10 @@ $(document).one("pagebeforeshow", "#myBooking", function () {
     });
 
     $(document).off('click', '#cancelBooking').on('click', '#cancelBooking', function (e) {
-        submitCancel(membershipNo, confirmationID, clubMemberID, courseID, flightDateTime, noOfHoles);
+        submitCancel(membershipNo, confirmationID);
     });
 });
-function submitCancel(membershipno, confirmationid, clubMemberID, courseID, flightDateTime, noOfHoles) {
+function submitCancel(membershipno, confirmationid) {
     $.ajax({
         url: SERVER_END_POINT_API + '/api/Booking/CancelBooking',
         type: 'GET',
@@ -126,16 +121,13 @@ function submitCancel(membershipno, confirmationid, clubMemberID, courseID, flig
         data: {
             MembershipNo: membershipno,
             ConfirmationID: confirmationid,
-            ClubMemberID: clubMemberID,
-            CourseID: courseID,
-            FlightDateTime: flightDateTime,
-            NoOfHoles: noOfHoles,
         },
         success: function (result) {
             if (result != null) {
                 if (result == "ok") {
-                    //alert("Cancel Success");
-                    $("#CancelSuccess").popup("open");
+                    $.mobile.loading("hide");
+                    $("#cancelBooking").popup("close");
+                    setTimeout(function () { $("#CancelSuccess").popup("open"); }, 1000);                    
                     $(document).off('click', '#cancelOK').on('click', '#cancelOK', function (e) {
                         loadBooking(membershipNo);
                     });
