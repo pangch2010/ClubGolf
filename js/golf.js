@@ -152,6 +152,7 @@ $(document).one('pagecreate', '#golf', function () {
             }
         }
         var timeDisplay = Timevalue.split(",");
+        alert("test");
         $("#Confirm_Inside-Course").html(course);
         //$("#Inside-DateTime").html(DisplayDay.getDate() + "/" + (DisplayDay.getMonth() + 1) + "/" + DisplayDay.getFullYear() + " (" + weekday[DisplayDay.getDay()]+")");
         $("#Confirm_Inside-DateTime").html(DisplayDay);
