@@ -1,0 +1,604 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Mobile: Theme Download</title>
+
+
+    <script type="text/javascript" src="phonegap.js"></script>
+    <link rel="stylesheet" href="css/themes/jquery.mobile-1.4.2.min.css" />
+    <link rel="stylesheet" href="css/themes/hr360.css">
+    <link rel="stylesheet" href="css/themes/clubMemberships.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="js/BookingCancellation.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="application/javascript">
+        window.addEventListener('load', function () {
+            FastClick.attach(document.body);
+        }, false);
+    </script>
+
+</head>
+<body>
+
+    <!--================================= REGISTER PAGE =================================-->
+    <div class="registerPage" id="register" data-role="page">
+        <div data-role="header" data-position="fixed">
+
+            <h1>Register V1.0</h1>
+
+            <div class="subtitle">KLGCC</div>
+        </div>
+
+        <div data-role="content" data-theme="a">
+
+            <p class="center">
+                <img src="images/logo.png">
+            </p>
+            <p class="center">Membership No.</p>
+            <input id="membershipNo" type="text" placeholder="membership no." maxlength="12" />
+            <br />
+
+            <p class="center">Enter the membership no. to register as the mobile user.</p>
+
+            <input id="btnRegister" type="button" value="Register" />
+
+        </div>
+
+        <div data-role="popup" id="errorPopup_register" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            
+            <div role="main" class="ui-content">
+                <h3>Error</h3>
+
+                <p class="ui-title">Invalid Membership No.</p>                
+                <br />
+
+                <a id="A2" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                </a>
+
+            </div>
+
+        </div>
+
+        <script src="js/register.js"></script>
+    </div>
+    <!--================================= (END) REGISTER PAGE (END) =================================-->
+
+    <!--================================= ACTIVATION PAGE =================================-->
+    <div id="activationPage" class="page" data-role="page" data-theme="a">
+
+        <div data-role="header" data-position="fixed">
+
+            <h1>Activation</h1>
+
+            <div class="subtitle">KLGCC</div>
+        </div>
+
+        <div data-role="content" data-theme="a">
+
+            <p class="center">
+                <img src="images/logo.png">
+            </p>
+
+            <p class="center">4-digit Activation</p>
+            <input id="activationCode" type="tel" placeholder="Activation Code">
+            <!--            <input id="activationCode" type="text" placeholder="Activation Code" maxlength="12" />-->
+            <br />
+
+            <p class="center">Enter the Activation Code to Activate the Mobile User.</p>
+
+            <input id="btnActivate" type="button" value="Activate" />
+        </div>
+
+        <div data-role="popup" id="errorPopup_activation" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            
+            <div role="main" class="ui-content">
+                <h3>Error</h3>
+
+                <p class="ui-title">Invalid Code</p>                
+                <br />
+
+                <a id="A1" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                </a>
+
+            </div>
+
+        </div>
+
+        <script src="js/activate.js"></script>
+    </div>
+    <!--================================= (END) ACTIVATION PAGE (END) =================================-->
+
+    <!--================================= HOME PAGE =================================-->
+    <div id="homepage" data-role="page" data-theme="a">
+        <div data-role="header" data-position="fixed">
+            <!--<a id="btnPower" href="#" class="ui-btn ui-corner-all ui-icon-power ui-btn-icon-notext iconstyle">Power Icon</a>-->
+            <h1>News</h1>
+            <!--<a id="btnGear" href="#" class="ui-btn ui-corner-all ui-icon-gear ui-btn-icon-notext iconstyle">Gear Icon</a>-->
+            <div id="homeSubTitle" class="subtitle">KLGCC</div>
+            <!--            <div class="subtitle">Welcome, Nur Aliana Mohamad</div>-->
+        </div>
+
+        <ul data-role="listview" data-inset="true">
+            <li class="promotionDetail">
+                <h5>Golf Over Rm 500 in total discounts</h5>
+                <p>
+                    free coffee
+                </p>
+            </li>
+            <li class="promotionDetail">
+                <h5>Showroom Promotion</h5>
+                <p>
+                    Get up to 50% discount
+                </p>
+            </li>
+        </ul>
+
+        <div data-position="fixed" class="center footerMenu">
+
+            <a href="#myBooking">
+                <img class="menuImage" src="images/icon/roster.png">
+            </a>
+
+            <a href="#statement">
+                <img class="menuImage" src="images/icon/profile.png">
+            </a>
+            
+            <p class="menuImageLabel">Boooking &nbsp&nbsp&nbsp  Statement</p>
+        </div>
+    </div>
+    <!--================================= (END) HOME PAGE (END) =================================-->
+
+    <!--================================= MYBOOKING PAGE =================================-->
+    <div id="myBooking" class="myBooking" data-role="page" data-theme="a">
+
+        <div data-role="header" data-position="fixed">
+            <a id="A3" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <h1>My Booking</h1>
+            <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+            <div class="subtitle">KLGCC</div>
+        </div>
+
+        <!--<ul data-role="listview" data-inset="true">
+            <li>
+                <div data-role="controlgroup">
+                    <input id="btnGolf" type="button" value="Golf Booking" />
+                    <input id="btnFacility" type="button" value="Facility Booking" />
+                </div>
+            </li>
+        </ul>-->
+
+        <!--<div class="subtitle">My Booking</div>-->
+
+        <ul id="wrapper" data-role="listview" data-inset="true">
+            
+        </ul>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+         <div data-position="fixed" class="center footerMenu">
+
+            <a href="#golf">
+                <img class="menuImage" src="images/icon/leave.png"></a>
+
+
+            <a href="#facility">
+                <img class="menuImage" src="images/icon/todo.png"></a>
+
+             <p class="menuImageLabel">Golf &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Facility</p>
+
+        </div>
+
+
+         <div data-role="popup" id="CancelSuccess" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+
+            <div role="main" class="ui-content">
+                <h3>Booking</h3>
+
+                <p class="ui-title">Booking cancellation has been done.</p>
+                <br />
+
+                <a id="cancelOK" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                </a>
+
+            </div>
+
+        </div>
+        <div data-role="popup" id="popupDialog" data-position-to="window" data-theme="a" data-overlay-theme="b" data-dismissible="false">
+            <div role="main" class="ui-content" style="background-color: #444; text-align: center; border: 0px">
+                <div style="line-height: 2em;">
+                    <label>Cancel Booking</label>
+                </div>
+                <div style="border-color: white; border-style: solid; border-width: 1px;">
+                    <h1 id="Inside-Course" style="border-bottom: 1px solid white; font-size: 1em; padding-bottom: 12px;"></h1>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 25%">
+                            <img src="images/date.png" class="BookingIcon" />
+                        </div>
+                        <div class="ui-block-b" style="width: 75%">
+                            <div id="Inside-DateTime" class="BookingWord"></div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 25%">
+                            <img src="images/time.png" class="BookingIcon" />
+                        </div>
+                        <div class="ui-block-b" style="width: 75%">
+                            <div id="Inside-Time" class="BookingWord"></div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 25%">
+                            <img src="images/hole.png" class="BookingIcon" />
+                        </div>
+                        <div class="ui-block-b" style="width: 75%">
+                            <div id="Inside-Hole" class="BookingWord"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="BookingWord" style="text-align: center;">
+                        This action cannot be undone.
+                        <br />
+                        Are you sure you want to cancel this booking?
+                    </p>
+                    <!--href="bookingConfirmed.html" -->
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 50%">
+                            <a id="cancelBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="c">Yes</a>
+                        </div>
+                        <div class="ui-block-b" style="width: 50%">
+                            <a id="cancelNo" data-role="button" data-mini="true" data-transition="fade" data-theme="e" data-rel="back">No</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================================= (END) MYBOOKING PAGE (END) =================================-->
+
+    <!--================================= STATEMENT PAGE =================================-->
+            <div id="statement" data-role="page" data-theme="a">
+
+                <div data-role="header" data-position="fixed">
+                    <a id="A5" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+                    <h1>Statement Info</h1>
+                    <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+                    <div class="subtitle">KLGCC</div>
+                </div>
+
+                <table data-role="table" data-mode="columntoggle" class="ui-responsive ui-shadow ttable">
+                    <tbody>
+
+                        <tr>
+                            <th>Current Oustanding</th>
+                            <td>RM 1000.00</td>
+                        </tr>
+                        <tr>
+                            <th>Payment Due Date</th>
+                            <td>12 / 12 / 2014</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <br />
+                <ul data-role="listview" data-inset="true" class="transactionListView">
+                    <li data-role="list-divider">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a" style="width: 30%">
+                                <div class="ui-bar ui-bar-a listHeader">Date</div>
+                            </div>
+                            <div class="ui-block-b" style="width: 40%">
+                                <div class="ui-bar ui-bar-a listHeader">Transaction</div>
+                            </div>
+                            <div class="ui-block-c" style="width: 30%">
+                                <div class="ui-bar ui-bar-a listHeader">RM</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="transcationData">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a" style="width: 30%">
+                                <div class="ui-bar ui-bar-a">5 Dec</div>
+                            </div>
+                            <div class="ui-block-b" style="width: 40%">
+                                <div class="ui-bar ui-bar-a">Payment</div>
+                            </div>
+                            <div class="ui-block-c" style="width: 30%">
+                                <div class="ui-bar ui-bar-a credit">1000.00</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="transcationData">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a" style="width: 30%">
+                                <div class="ui-bar ui-bar-a">15 Dec</div>
+                            </div>
+                            <div class="ui-block-b" style="width: 40%">
+                                <div class="ui-bar ui-bar-a">Set B Meal</div>
+                            </div>
+                            <div class="ui-block-c" style="width: 30%">
+                                <div class="ui-bar ui-bar-a debit">(80.00)</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="transcationData">
+                        <div class="ui-grid-b">
+                            <div class="ui-block-a" style="width: 30%">
+                                <div class="ui-bar ui-bar-a">25 Dec</div>
+                            </div>
+                            <div class="ui-block-b" style="width: 40%">
+                                <div class="ui-bar ui-bar-a">Set C Meal</div>
+                            </div>
+                            <div class="ui-block-c" style="width: 30%">
+                                <div class="ui-bar ui-bar-a debit">(180.00)</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <!--================================= (END) STATEMENT PAGE (END) =================================-->
+
+    <!--================================= PROMOTION PAGE =================================-->
+    <div id="promotioDetailPage" class="page" data-role="page">
+        <div data-role="header" data-position="fixed">
+            <a id="btnBack_PromotionPage" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <h1>Promotion Detail</h1>
+            <a id="btnHome" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+            <div class="subtitle">KLGCC</div>
+        </div>
+
+        <div data-role="content" data-theme="a">
+            <p>Golf Over Rm 500 in total discounts</p>
+            <p class="center">
+                <img class="featuredImageBig" src="images/GolfPromotions.jpg">
+            </p>
+
+        </div>
+    </div>
+    <!--================================= (END) PROMOTION PAGE (END) =================================-->
+
+    <!--================================= GOLF PAGE =================================-->
+    <div id="golf" class="page" data-role="page">
+        <div data-role="header" data-position="fixed">
+            <a id="btnBack_GolfPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <h1>Golf Booking</h1>
+                        <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+            <div class="subtitle">KLGCC</div>
+        </div>
+
+        <div data-role="content" data-theme="a">
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a" style="width: 60%">
+                    <div>
+                        <select id="dropDate" data-native-menu="true" data-mini="true" data-theme="a">
+                        </select>
+                    </div>
+                </div>
+                <div class="ui-block-b" style="width: 40%">
+                    <div>
+                        <select data-native-menu="true" name="select-multiple-5" id="DropAMPM" data-mini="true" data-theme="a">
+                            <option value="AM">Morning</option>
+                            <option value="PM">Afternoon</option>
+                            <option value="NIGHT">Night</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a" style="width: 60%">
+                    <div>
+                        <select data-native-menu="true" id="dropCourse" data-mini="true" data-theme="a">
+                        </select>
+                    </div>
+                </div>
+                <div class="ui-block-b" style="width: 40%">
+                    <div>
+                        <select data-native-menu="true" name="select-multiple-5" id="DropHoles" data-mini="true" data-theme="a">
+                            <option value="18">18 Holes</option>
+                            <option value="9">9 Holes</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+        </div>
+
+        <div class="ui-grid-a">
+            <div class="center" style="background-color: rgba(0,0,0,.40); left: 0; right: 0; width: 100%;">
+                <a id="btnSearch" href="#" class="ui-btn ui-btn-inline" style="background-color: transparent; border: none; padding: 0px 120px">
+                    <img src="images/icon/search.png" /></a>
+                <div class="ui-grid-solo center" id="listFlight" data-theme="d" style="padding: 0px;"></div>
+            </div>
+            <br />
+            <br />
+        </div>
+
+
+
+        <div data-role="popup" id="popupConfirmBooking" data-position-to="window" data-theme="a" data-overlay-theme="b" data-dismissible="false">
+            <div role="main" class="ui-content" style="background-color: #444; text-align: center; border: 0px">
+                <div style="line-height: 2em;">
+                    <label>Confirm Booking</label>
+                </div>
+                <div style="border-color: white; border-style: solid; border-width: 1px;">
+                    <h1 id="Confirm_Inside-Course" style="border-bottom: 1px solid white; font-size: 1em; padding-bottom: 12px;"></h1>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 25%">
+                            <img src="images/date.png" class="BookingIcon" />
+                        </div>
+                        <div class="ui-block-b" style="width: 75%">
+                            <div id="Confirm_Inside-DateTime" class="BookingWord"></div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 25%">
+                            <img src="images/time.png" class="BookingIcon" />
+                        </div>
+                        <div class="ui-block-b" style="width: 75%">
+                            <div id="Confirm_Inside-Time" class="BookingWord"></div>
+                        </div>
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 25%">
+                            <img src="images/hole.png" class="BookingIcon" />
+                        </div>
+                        <div class="ui-block-b" style="width: 75%">
+                            <div id="Confirm_Inside-Hole" class="BookingWord"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="BookingWord" style="text-align: center;">
+                        This action cannot be undone.
+                        <br />
+                        Are you sure you want to Confirm this booking?
+                    </p>
+                    <!--href="bookingConfirmed.html" -->
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" style="width: 50%">
+                            <a id="SubmitBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="c">Yes</a>
+                        </div>
+                        <div class="ui-block-b" style="width: 50%">
+                            <a id="cancelComfirm" data-role="button" data-mini="true" data-transition="fade" data-theme="e" data-rel="back">No</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="popup" id="popup_ErrMsg" data-position-to="window" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+            <div role="main" class="ui-content">
+                <h3>Error</h3>
+                <p class="ui-title" id="ErroMessage"></p>
+                <a id="closeErrMsg" data-role="button" data-mini="true" data-transition="flow" data-theme="e">OK</a>
+            </div>
+        </div>
+
+        <script src="js/golf.js"></script>
+    </div>
+    <!--================================= (END) GOLF PAGE (END) =================================-->
+
+    <!--================================= FACILITY PAGE =================================-->
+    <div id="facility" class="page" data-role="page">
+        <div data-role="header" data-position="fixed">
+            <a id="btnBack_FacilityPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <h1>Facility Booking</h1>
+                        <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+            <div class="subtitle">KLGCC</div>
+        </div>
+
+        <div data-role="content" data-theme="a">
+
+            <div data-role="main" class="ui-content">
+
+                <div class="ui-grid-solo" style="width: 100%">
+                    <div>
+                        <select data-native-menu="true" id="Select7" data-mini="true" data-theme="a">
+                            <option>Facilities</option>
+                            <option>Facilities 1</option>
+                            <option>Facilities 2</option>
+                            <option>Facilities 3</option>
+                            <option>Facilities 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a" style="width: 60%">
+                        <div>
+                            <select id="Select5" data-native-menu="true" data-mini="true" data-theme="a">
+                                <option>Date</option>
+                                <option>11/12/2014</option>
+                                <option>12/12/2014</option>
+                                <option>13/12/2014</option>
+                                <option>14/12/2014</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ui-block-b" style="width: 40%">
+                        <div>
+                            <select data-native-menu="true" name="select-multiple-5" id="select6" data-mini="true" data-theme="a">
+                                <option value="small">AM</option>
+                                <option value="medium">PM</option>
+                                <option value="large">NIGHT</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="ui-grid-a">
+                <div class="center" style="background-color: rgba(0,0,0,.40); left: 0; right: 0; width: 100%;">
+                    <a id="btnSearchFacilities" href="#" class="ui-btn ui-btn-inline" style="background-color: transparent; border: none; padding: 0px 120px">
+                        <img src="images/icon/search.png" /></a>
+                    <div class="ui-grid-solo center" id="listFacilitiesFlight" data-theme="d" style="padding: 0px;"></div>
+
+                </div>
+                <br />
+                <br />
+            </div>
+
+            <div data-role="popup" id="popupFacilityConfirmBooking" data-position-to="window" data-theme="a" data-overlay-theme="b" data-dismissible="false">
+                <div role="main" class="ui-content" style="background-color: #444; text-align: center; border: 0px">
+                    <div style="line-height: 2em;">
+                        <label>Confirm Booking</label>
+                    </div>
+                    <div style="border-color: white; border-style: solid; border-width: 1px;">
+                        <h1 id="Confirm_F_Inside-Course" style="border-bottom: 1px solid white; font-size: 1em; padding-bottom: 12px;"></h1>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 25%">
+                                <img src="images/date.png" class="BookingIcon" />
+                            </div>
+                            <div class="ui-block-b" style="width: 75%">
+                                <div id="Confirm_F_Inside-DateTime" class="BookingWord"></div>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 25%">
+                                <img src="images/time.png" class="BookingIcon" />
+                            </div>
+                            <div class="ui-block-b" style="width: 75%">
+                                <div id="Confirm_F_Inside-Time" class="BookingWord"></div>
+                            </div>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 25%">
+                                <img src="images/hole.png" class="BookingIcon" />
+                            </div>
+                            <div class="ui-block-b" style="width: 75%">
+                                <div id="Confirm_F_Inside-Hole" class="BookingWord"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="BookingWord" style="text-align: center;">
+                            This action cannot be undone.
+                        <br />
+                            Are you sure you want to Confirm this booking?
+                        </p>
+                        <!--href="bookingConfirmed.html" -->
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a" style="width: 50%">
+                                <a id="A7" data-role="button" data-mini="true" data-transition="flow" data-theme="c">Yes</a>
+                            </div>
+                            <div class="ui-block-b" style="width: 50%">
+                                <a id="A8" data-role="button" data-mini="true" data-transition="fade" data-theme="e" data-rel="back">No</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="js/facility.js"></script>
+        </div>
+        <!--================================= (END) FACILITY PAGE (END) =================================-->
+</body>
+</html>

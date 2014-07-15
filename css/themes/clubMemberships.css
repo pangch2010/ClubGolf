@@ -1,0 +1,186 @@
+﻿body {
+}
+
+.center {
+    text-align: center;
+}
+
+a#oneTab {
+height: 3em;
+background-color:#D8D8D8;
+}
+
+a#twoTab {
+height: 3em;
+background-color:#D8D8D8;
+}
+
+a#threeTab {
+height: 3em;
+background-color:#D8D8D8;
+}
+
+a#ui-id-4 {
+height: 3em;
+background-color:#D8D8D8;
+}
+
+.labelStyle, button.textBoxStyle.ui-btn.ui-shadow.ui-corner-all {
+    color: white;
+}
+
+.labelStyle {
+   padding: .7em 0;
+}
+
+li.transcationData.ui-li-static.ui-body-inherit, li.ui-li-divider.ui-bar-inherit.ui-first-child {
+    padding: 0;
+    font-size: 15px;
+}
+
+div.ui-bar.ui-bar-a {
+    color: black;
+     background-color: white;
+    background-image: none;
+}
+
+label.labelStyle {
+padding: 5px 0px;
+font-size: 15px;
+}
+
+button.textBoxStyle.ui-btn.ui-shadow.ui-corner-all {
+padding: 5px;
+margin: 0;
+}
+
+div.ui-bar.ui-bar-a.listHeader {
+background-color: #00507e;
+color: white;
+}
+
+label.labelStyle.dateFromTo {
+padding: 0;
+margin: 0;
+}
+
+ul.transactionListView.ui-listview.ui-listview-inset.ui-corner-all.ui-shadow {
+padding: 0;
+margin: 0;
+}
+
+div.ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
+background-color: #0a5e9b;
+color: white;
+}
+
+button.btnFlight.ui-btn.ui-btn-a.ui-btn-inline.ui-shadow.ui-mini,button.btnFlightFacility.ui-btn.ui-btn-a.ui-btn-inline.ui-shadow.ui-corner-all.ui-mini {
+font-size: 10px;
+}
+
+div.ui-content.ui-body-a {
+padding: 10px;
+}
+
+div.ui-content {
+padding: 5px 10px;
+}
+
+table.ui-responsive.ui-shadow.ttable.ui-table.ui-table-columntoggle {
+margin: 0;
+}
+
+.myBooking {
+    padding: 0 -10px;
+}
+
+div#activationPage, div#register {
+background-color: white;
+}
+
+
+a#cancelBooking, div#popupDialog, .BookingIcon, a#cancelNo,div#popupConfirmBooking,div#popupFacilityConfirmBooking,.courtLabel {
+color: white;
+}
+
+.BookingIcon {
+    width: 40px;
+}
+
+
+.featuredImage {
+    height: 200px;
+    width: 400px;
+}
+
+button.cancelBookingButton {
+color: white;
+background-color: red;
+margin-left: 120px;
+font-size: 15px;
+border-radius: 20px;
+}
+
+.featuredImageBig {
+     height: 400px;
+    width: 550px;
+}
+
+.menuImage {
+    height: 60px;
+    width: 60px;
+    padding: 5px 10px 0 10px;
+}
+
+div.ui-footer.ui-bar-inherit.ui-footer-fixed.slideup {
+background-image: none;
+opacity: 0.8;
+}
+
+div.center.footerMenu {
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: #1D2C44;
+}
+
+div#homepage,div#statement,div#myBooking  {
+max-height: 100;
+}
+
+[data-role=page]{height: 100% !important; position:relative !important;}
+/*[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}*/ 
+
+li.ui-li-static.ui-body-inherit.ui-first-child,li.ui-li-static.ui-body-inherit {
+padding: 0px 5px;
+}
+
+div.ui-bar.ui-bar-a.credit {
+color: green;
+}
+
+
+div.ui-bar.ui-bar-a.debit {
+color: red;
+}
+
+a#btnBack_GolfPage, a#A3 ,a#A4,a#A5,a#A6,a#btnBack_FacilityPage{
+padding: 5px;
+}
+
+a#cancelBooking {
+color: green;
+text-shadow: 0 1px 0 green;
+}
+
+a#cancelNo{
+color: red;
+text-shadow: 0 1px 0 red;
+}
+
+p.menuImageLabel {
+color: white;
+font-size: 15px;
+margin: 0;
+}
