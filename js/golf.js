@@ -117,7 +117,7 @@ $(document).one('pagecreate', '#golf', function () {
                     $.each(result.AvailableTime, function (index, element) {
                         var time = element;
                         var res = time.split(" ");
-                        $("#listFlight").append("<button style='width:70px; height:' class=" + 'btnFlight' + " data-role=" + 'button' + " data-theme=" + 'c' + " data-mini='true' data-corners=" + 'false' + " data-mini=" + 'true' + " data-inline=" + 'true' + " value =" + res + " time =" + res + ">" + time + "</button>").trigger("create");
+                        $("#listFlight").append("<a style='width:70px; height:' class=" + 'btnFlight' + " data-role=" + 'button' + " data-theme=" + 'c' + " data-mini='true' data-corners=" + 'false' + " data-mini=" + 'true' + " data-inline=" + 'true' + " value =" + res + " time =" + res + ">" + time + "</a>").trigger("create");
                     });
                     $("#listFlight").append("<br/><br/>").children().last().trigger("create");
 
@@ -130,6 +130,7 @@ $(document).one('pagecreate', '#golf', function () {
         }
     });
     $(document).off('click', '.btnFlight').on('click', '.btnFlight', function (e) {
+        alert("test");
         value = $(this).attr("time");
         var Check9Hole = $(this).text();
         course = $('#dropCourse :selected').text();
