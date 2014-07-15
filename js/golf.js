@@ -1,4 +1,4 @@
-﻿var value;
+﻿var Timevalue;
 var course;
 var date;
 var time;
@@ -130,9 +130,11 @@ $(document).one('pagecreate', '#golf', function () {
         }
     });
     $(document).off('click', '.btnFlight').on('click', '.btnFlight', function (e) {
-        alert("test");
-        value = $(this).attr("time");
+        
+        Timevalue = $(this).attr("time");
+        
         var Check9Hole = $(this).text();
+        alert(Timevalue + " " + Check9Hole);
         course = $('#dropCourse :selected').text();
         date = $('#dropDate :selected').attr("date");
         var DisplayDay = $('#dropDate :selected').attr("DisplayDate");
@@ -149,7 +151,7 @@ $(document).one('pagecreate', '#golf', function () {
                 }
             }
         }
-        var timeDisplay = value.split(",");
+        var timeDisplay = Timevalue.split(",");
         $("#Inside-Course").html(course);
         //$("#Inside-DateTime").html(DisplayDay.getDate() + "/" + (DisplayDay.getMonth() + 1) + "/" + DisplayDay.getFullYear() + " (" + weekday[DisplayDay.getDay()]+")");
         $("#Inside-DateTime").html(DisplayDay);
@@ -175,7 +177,7 @@ $(document).one('pagecreate', '#golf', function () {
             url: SERVER_END_POINT_API + "api/Booking/Book",
             dataType: 'json',
             data: {
-                Date: date + " " + value,
+                Date: date + " " + Timevalue,
                 CourseCode: course,
                 ClientCourseCode: ClientcourseID,
                 MembershipNo: membershipNo,
