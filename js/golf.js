@@ -75,6 +75,7 @@ $(document).one('pagecreate', '#golf', function () {
     $(".btnBack").click(function () {
         $.mobile.navigate("menu.html", { transition: "slide", info: "info about the #bar hash" });
     });
+
     $(document).off('click', '#closeErrMsg').on('click', '#closeErrMsg', function (e) {
         $("#popup_ErrMsg").popup("close");
     });
@@ -86,6 +87,13 @@ $(document).one('pagecreate', '#golf', function () {
     });
     $(document).off('change', '#DropAMPM').on('change', '#DropAMPM', function (e) {
         resetAvailabletime();
+    });
+    $(document).off('click', '#CloseSuccessBooking').on('click', '#CloseSuccessBooking', function (e) {
+        $.mobile.changePage("#myBooking", {
+            transition: "flip",
+            reverse: false,
+            changeHash: true
+        });
     });
     $(document).off('click', '#btnSearch').on('click', '#btnSearch', function (e) {
         resetAvailabletime();
@@ -187,7 +195,8 @@ $(document).one('pagecreate', '#golf', function () {
             },
             success: function (result) {
                 if (result === parseInt(result)) {
-                    $.mobile.changePage("bookingConfirmed.html", { data: { "BookingID": result } });
+                    $("#popup_Booking").popup("close");
+                    setTimeout(function () { $("#popup_sucessfullyBooking").popup("open"); }, 1000);
                 }
                 else {
                     $("#popup_Booking").popup("close");
