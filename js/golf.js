@@ -134,7 +134,7 @@ $(document).one('pagecreate', '#golf', function () {
         Timevalue = $(this).attr("time");
         
         var Check9Hole = $(this).text();
-        alert(Timevalue + " " + Check9Hole);
+       
         course = $('#dropCourse :selected').text();
         date = $('#dropDate :selected').attr("date");
         var DisplayDay = $('#dropDate :selected').attr("DisplayDate");
@@ -152,11 +152,11 @@ $(document).one('pagecreate', '#golf', function () {
             }
         }
         var timeDisplay = Timevalue.split(",");
-        $("#Inside-Course").html(course);
+        $("#Confirm_Inside-Course").html(course);
         //$("#Inside-DateTime").html(DisplayDay.getDate() + "/" + (DisplayDay.getMonth() + 1) + "/" + DisplayDay.getFullYear() + " (" + weekday[DisplayDay.getDay()]+")");
-        $("#Inside-DateTime").html(DisplayDay);
-        $("#Inside-Time").html(timeDisplay[0] + " " + time);
-        $("#Inside-Hole").html(hole + " " + "Holes");
+        $("#Confirm_Inside-DateTime").html(DisplayDay);
+        $("#Confirm_Inside-Time").html(timeDisplay[0] + " " + time);
+        $("#Confirm_Inside-Hole").html(hole + " " + "Holes");
         $("#popup_Booking").popup("open");
 
     });
