@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/themes/clubMemberships.css">
     <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/fastclick.js"></script>
-    <script src="js/BookingCancellation.js"></script>
+    <script src="js/fastclick.js"></script>    
     <script src="js/menu.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/main.js"></script>
@@ -29,23 +28,23 @@
     <div class="registerPage" id="register" data-role="page">
         <div data-role="header" data-position="fixed">
 
-            <h1>Register V1.0</h1>
+            <h1>Register</h1>
 
             <div class="subtitle">KLGCC</div>
         </div>
 
-        <div data-role="content" data-theme="a">
+        <div data-role="content" data-theme="a" class="registerPage">
 
-            <p class="center">
-                <img src="images/logo.png">
-            </p>
-            <p class="center">Membership No.</p>
-            <input id="membershipNo" type="text" placeholder="membership no." maxlength="12" />
+
+                <img src="images/logo.png" class="ifcaLogo">
+
+                <input id="membershipNo" type="text" placeholder="Membership no." maxlength="12" class="membershipNoTextBox"/>
+
+            <p class="dexcriptionLabel">Enter the membership no. to register as the mobile user.</p>
+
             <br />
 
-            <p class="center">Enter the membership no. to register as the mobile user.</p>
-
-            <input id="btnRegister" type="button" value="Register" />
+            <input id="btnRegister" class="registerButton" type="button" value="Register" />
 
         </div>
 
@@ -78,18 +77,14 @@
             <div class="subtitle">KLGCC</div>
         </div>
 
-        <div data-role="content" data-theme="a">
+        <div data-role="content" data-theme="a" class="registerPage">
 
-            <p class="center">
-                <img src="images/logo.png">
-            </p>
+            <img src="images/logo.png" class="ifcaLogo">
 
-            <p class="center">4-digit Activation</p>
             <input id="activationCode" type="tel" placeholder="Activation Code">
-            <!--            <input id="activationCode" type="text" placeholder="Activation Code" maxlength="12" />-->
-            <br />
 
-            <p class="center">Enter the Activation Code to Activate the Mobile User.</p>
+            <p class="dexcriptionLabel">Enter the Activation Code to Activate the Mobile User.</p>
+             <br />
 
             <input id="btnActivate" type="button" value="Activate" />
         </div>
@@ -125,30 +120,26 @@
 
         <ul data-role="listview" data-inset="true">
             <li class="promotionDetail">
-                <h5>Golf Over Rm 500 in total discounts</h5>
+                <h5 class="newsTitle">Golf Over Rm 500 in total discounts</h5>
                 <p>
                     free coffee
                 </p>
             </li>
             <li class="promotionDetail">
-                <h5>Showroom Promotion</h5>
+                <h5 class="newsTitle">Showroom Promotion</h5>
                 <p>
                     Get up to 50% discount
                 </p>
             </li>
         </ul>
 
-        <div data-position="fixed" class="center footerMenu">
+        <div class="center footerMenu">
 
-            <a href="#myBooking">
-                <img class="menuImage" src="images/icon/roster.png">
-            </a>
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#myBooking" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/calender.png"><br /><p class="tabButtonLabel">Booking</p></a>
+                <a href="#statement" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/statement.png"><br /><p class="tabButtonLabel">Statement</p></a>
+            </div>
 
-            <a href="#statement">
-                <img class="menuImage" src="images/icon/profile.png">
-            </a>
-            
-            <p class="menuImageLabel">Boooking &nbsp&nbsp&nbsp  Statement</p>
         </div>
     </div>
     <!--================================= (END) HOME PAGE (END) =================================-->
@@ -183,19 +174,14 @@
         <br />
         <br />
 
-         <div data-position="fixed" class="center footerMenu">
+        <div class="center footerMenu">
 
-            <a href="#golf">
-                <img class="menuImage" src="images/icon/leave.png"></a>
-
-
-            <a href="#facility">
-                <img class="menuImage" src="images/icon/todo.png"></a>
-
-             <p class="menuImageLabel">Golf &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Facility</p>
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#golf" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/golf.png"><br /><p class="tabButtonLabel">Golf</p></a>
+                <a href="#facility" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/facilities.png"><br /><p class="tabButtonLabel">Facility</p></a>
+            </div>
 
         </div>
-
 
          <div data-role="popup" id="CancelSuccess" data-overlay-theme="b" data-theme="a" data-dismissible="false">
 
@@ -268,9 +254,9 @@
             <div id="statement" data-role="page" data-theme="a">
 
                 <div data-role="header" data-position="fixed">
-                    <a id="A5" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+                    <a id="A5" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="turn">Power Icon</a>
                     <h1>Statement Info</h1>
-                    <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+                    <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="turn">Gear Icon</a>
                     <div class="subtitle">KLGCC</div>
                 </div>
 
@@ -369,9 +355,9 @@
     <!--================================= GOLF PAGE =================================-->
     <div id="golf" class="page" data-role="page">
         <div data-role="header" data-position="fixed">
-            <a id="btnBack_GolfPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <a id="btnBack_GolfPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="turn">Power Icon</a>
             <h1>Golf Booking</h1>
-                        <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+                        <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="turn">Gear Icon</a>
             <div class="subtitle">KLGCC</div>
         </div>
 
@@ -497,9 +483,9 @@
     <!--================================= FACILITY PAGE =================================-->
     <div id="facility" class="page" data-role="page">
         <div data-role="header" data-position="fixed">
-            <a id="btnBack_FacilityPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <a id="btnBack_FacilityPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="turn">Power Icon</a>
             <h1>Facility Booking</h1>
-                        <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+                        <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="turn">Gear Icon</a>
             <div class="subtitle">KLGCC</div>
         </div>
 

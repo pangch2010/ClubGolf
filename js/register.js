@@ -1,19 +1,19 @@
 ﻿$(document).one('pagecreate', '#register', function () {
 
-    //$("#btnRegister").click(function () {
+    $("#btnRegister").click(function () {
 
-    //    if ($("#membershipNo").val().length > 0) {
-    //        $.mobile.changePage("#activationPage", {
-    //            transition: "flip",
-    //            reverse: false,
-    //            changeHash: false
-    //        });
-    //    }
-    //    else {
-    //        alert("Error: Please enter the memberhip no...");
-    //    }
+        if ($("#membershipNo").val().length > 0) {
+            $.mobile.changePage("#activationPage", {
+                transition: "flip",
+                reverse: false,
+                changeHash: false
+            });
+        }
+        else {
+            alert("Error: Please enter the memberhip no...");
+        }
 
-    //});
+    });
 
     function navigateToMenu() {
         $.mobile.changePage("#homepage", {

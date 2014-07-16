@@ -1,4 +1,75 @@
-﻿body {
+﻿
+#register, #activationPage {
+    background:#039 url(../../images/bg.jpg); 
+    background-size:cover;
+    background-color: transparent;
+}
+
+img.ifcaLogo {
+padding: 50px 0 20px 0;
+width: 110px;
+}
+
+div.registerPage.ui-content.ui-body-a {
+background-color: transparent;
+padding: 0 30px;
+}
+
+input#membershipNo {
+padding: 10px 10px;
+font-size: 15px;
+}
+
+div.ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
+color: white;
+opacity: 1;
+/* Webkit (Safari/Chrome 10) */ 
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #4BA246), color-stop(1, #358841));
+
+/* Webkit (Chrome 11+) */ 
+background-image: -webkit-linear-gradient(top, #4BA246 0%, #358841 100%);
+border: none;
+width: 120px;
+font-size: 15px;
+font-style: normal;
+font-weight: normal;
+-moz-box-shadow:2px 2px 6px rgba(0,0,0,0.2);
+-webkit-box-shadow:2px 2px 6px rgba(0,0,0,0.2);
+box-shadow:2px 2px 6px rgba(0,0,0,0.2);
+}
+
+p.dexcriptionLabel {
+color: white;
+font-size: 15px;
+padding: 0;
+margin: 0;
+font-weight: normal;
+}
+
+p.tabButtonLabel {
+color: white;
+font-size: 15px !important; 
+padding: 0;
+margin: 0;
+font-weight: normal;
+}
+
+.ui-btn:hover, .ui-btn:active{
+    background-color: transparent !important;
+}
+
+a.ui-btn.ui-first-child,a.ui-btn.ui-last-child {
+background-color: transparent;
+width: 100;
+border: none;
+padding: 0 30px;
+}
+
+h5.newsTitle {
+color: #0D6FB6;
+}
+
+body {
 }
 
 .center {
@@ -69,10 +140,6 @@ padding: 0;
 margin: 0;
 }
 
-div.ui-btn.ui-input-btn.ui-corner-all.ui-shadow {
-background-color: #0a5e9b;
-color: white;
-}
 
 button.btnFlight.ui-btn.ui-btn-a.ui-btn-inline.ui-shadow.ui-mini,button.btnFlightFacility.ui-btn.ui-btn-a.ui-btn-inline.ui-shadow.ui-corner-all.ui-mini {
 font-size: 10px;
@@ -127,8 +194,8 @@ border-radius: 20px;
 }
 
 .menuImage {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     padding: 5px 10px 0 10px;
 }
 
@@ -142,10 +209,10 @@ div.center.footerMenu {
     bottom:0;
     left:0;
     right:0;
-    background-color: #1D2C44;
+    background-color: #0a5e9b;
 }
 
-div#homepage,div#statement,div#myBooking  {
+div#homepage,div#statement,div#myBooking,div#golf, div#facility, div#register, div#activationPage{
 max-height: 100;
 }
 
@@ -153,7 +220,7 @@ max-height: 100;
 /*[data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}*/ 
 
 li.ui-li-static.ui-body-inherit.ui-first-child,li.ui-li-static.ui-body-inherit {
-padding: 0px 5px;
+padding: 5px 10px;
 }
 
 div.ui-bar.ui-bar-a.credit {

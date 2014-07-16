@@ -147,7 +147,7 @@ $(document).one('pagecreate', '#golf', function () {
         
         var Check9Hole = $(this).text();
        
-        course = $('#dropCourse :selected').text();
+        course = $('#dropCourse :selected').attr("Text");
         date = $('#dropDate :selected').attr("date");
         var DisplayDay = $('#dropDate :selected').attr("DisplayDate");
 
