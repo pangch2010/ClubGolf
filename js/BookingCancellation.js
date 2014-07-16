@@ -110,37 +110,34 @@ $(document).on("pagebeforeshow", "#myBooking", function () {
     });
 
     $(document).off('click', '#cancelBooking').on('click', '#cancelBooking', function (e) {
-        submitCancel(membershipNo, confirmationID);
-    });
-});
-function submitCancel(membershipno, confirmationid) {
-    $.ajax({
-        url: SERVER_END_POINT_API + '/api/Booking/CancelBooking',
-        type: 'GET',
-        dataType: 'json',
-        data: {
-            MembershipNo: membershipno,
-            ConfirmationID: confirmationid,
-        },
-        success: function (result) {
-            if (result != null) {
-                if (result == "ok") {
-                    $.mobile.loading("hide");
-                    $("#cancelBooking").popup("close");
-                    setTimeout(function () { $("#CancelSuccess").popup("open"); }, 1000);                    
-                    $(document).off('click', '#cancelOK').on('click', '#cancelOK', function (e) {
-                        loadBooking(membershipNo);
-                    });
-
+        $.ajax({
+            url: SERVER_END_POINT_API + '/api/Booking/CancelBooking',
+            type: 'GET',
+            dataType: 'json',
+            data: {
+                MembershipNo: membershipNo,
+                ConfirmationID: confirmationID,
+            },
+            success: function (result) {
+                if (result != null) {
+                    if (result == "ok") {
+                        $.mobile.loading("hide");
+                        $("#popupDialog").popup("close");
+                        setTimeout(function () { $("#CancelSuccess").popup("open"); }, 1000);
+                    } else {
+                        alert("fail to cancel");
+                    }
                 } else {
                     alert("fail to cancel");
                 }
-            } else {
-                alert("fail to cancel");
-            }
-        },
-        error: function () {
-            alert("error");
-        },
+            },
+            error: function () {
+                alert("error");
+            },
+        });
     });
-}
+
+    $(document).off('click', '#cancelOK').on('click', '#cancelOK', function (e) {
+        loadBooking(membershipNo);
+    });
+});
