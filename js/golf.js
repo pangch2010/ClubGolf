@@ -76,8 +76,6 @@ $(document).on('pagebeforeshow', '#golf', function () {
 });
 
 $(document).one('pagecreate', '#golf', function () {
-    GenerateDateDropDownList();
-    GenerateCourseDropdownList();
     $(".btnBack").click(function () {
         $.mobile.navigate("menu.html", { transition: "slide", info: "info about the #bar hash" });
     });
