@@ -73,11 +73,14 @@ $(document).on('pagebeforeshow', '#golf', function () {
     GenerateDateDropDownList();
     GenerateCourseDropdownList();
     resetAvailabletime();
+    var common = new Common();
+
+    common.DisableScrollAfterPopup("#popup_Booking");
 });
 
 $(document).one('pagecreate', '#golf', function () {
     $(".btnBack").click(function () {
-        $.mobile.navigate("menu.html", { transition: "slide", info: "info about the #bar hash" });
+        $.mobile.navigate("menu.html", { transition: "none", info: "info about the #bar hash" });
     });
 
     $(document).off('click', '#closeErrMsg').on('click', '#closeErrMsg', function (e) {
@@ -94,7 +97,7 @@ $(document).one('pagecreate', '#golf', function () {
     });
     $(document).off('click', '#CloseSuccessBooking').on('click', '#CloseSuccessBooking', function (e) {
         $.mobile.changePage("#myBooking", {
-            transition: "flip",
+            transition: "none",
             reverse: false,
             changeHash: true
         });
@@ -147,7 +150,7 @@ $(document).one('pagecreate', '#golf', function () {
         
         var Check9Hole = $(this).text();
        
-        course = $('#dropCourse :selected').attr("Text");
+        course = $('#dropCourse :selected').text();
         date = $('#dropDate :selected').attr("date");
         var DisplayDay = $('#dropDate :selected').attr("DisplayDate");
 
@@ -170,6 +173,8 @@ $(document).one('pagecreate', '#golf', function () {
         $("#Confirm_Inside-Time").html(timeDisplay[0] + " " + time);
         $("#Confirm_Inside-Hole").html(hole + " " + "Holes");
         $("#popup_Booking").popup("open");
+
+     
 
     });
     $(document).off('click', '#cancelComfirm').on('click', '#cancelComfirm', function (e) {

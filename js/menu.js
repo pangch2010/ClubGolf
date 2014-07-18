@@ -94,26 +94,6 @@ $(document).one("pagebeforeshow", function () {
         $("#popupDialog").popup("open");
     });
 
-    $("#popupDialog").popup({
-        afteropen: function (event, ui) {
-            $('body').css({
-                overflow: 'hidden',
-                width: '100%'
-            });
-            $('#page1').css({
-                overflow: 'hidden'
-            });
-        },
-        afterclose: function (event, ui) {
-            $('body').css({
-                overflow: 'auto'
-            });
-            $('#page1').css({
-                overflow: 'auto'
-            });
-        }
-    });
-
     $(document).off('click', '#cancelBooking').on('click', '#cancelBooking', function (e) {
         $("#popupDialog").popup("close");
         $("#CancelSuccess").popup("open");

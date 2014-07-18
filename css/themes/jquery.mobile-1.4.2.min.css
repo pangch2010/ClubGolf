@@ -3026,14 +3026,11 @@ ul.ui-grid-a, ul.ui-grid-b, ul.ui-grid-c, ul.ui-grid-d, ul.ui-grid-solo, li.ui-b
         list-style: none;
         margin: 0;
         padding: 0;
-        position: fixed;
+        position: relative;
         display: block;
         border: 0;
         max-width: 100%;
         overflow: visible;
-        left:0;
-        right:0;
-        bottom:0;
     }
 
     .ui-navbar li .ui-btn {

@@ -166,7 +166,7 @@ background-color: white;
 }
 
 
-a#cancelBooking, div#popupDialog, .BookingIcon, a#cancelNo,div#popupConfirmBooking,div#popupFacilityConfirmBooking,.courtLabel {
+a#cancelBooking, div#popupDialog, .BookingIcon, a#cancelNo,div#popup_Booking,.courtLabel,div#popupFacilityConfirmBooking,div#popupConfirmBooking {
 color: white;
 }
 
@@ -183,9 +183,13 @@ color: white;
 button.cancelBookingButton {
 color: white;
 background-color: red;
-margin-left: 120px;
+margin-left: 130px;
 font-size: 15px;
 border-radius: 20px;
+}
+
+ul#wrapper li {
+    margin-left: 10px;
 }
 
 .featuredImageBig {
@@ -236,13 +240,13 @@ a#btnBack_GolfPage, a#A3 ,a#A4,a#A5,a#A6,a#btnBack_FacilityPage{
 padding: 5px;
 }
 
-a#cancelBooking {
-color: green;
+a#cancelBooking, a#SubmitBooking {
+background-color: green;
 text-shadow: 0 1px 0 green;
 }
 
-a#cancelNo{
-color: red;
+a#cancelNo, a#cancelComfirm{
+background-color: red;
 text-shadow: 0 1px 0 red;
 }
 
@@ -250,4 +254,27 @@ p.menuImageLabel {
 color: white;
 font-size: 15px;
 margin: 0;
+}
+
+#splashscreen{background:#039 url(../../images/bg.jpg); background-size:cover;}
+
+#splashscreen .panel {
+    border: none;
+    border-radius: 0;
+    background-color:#1a517f;
+    color:#fff;
+    padding:45px 0;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+    text-align: center;
+}
+
+#splashscreen .panel > img{
+    width: 150px;
+    height: 80px;
 }

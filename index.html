@@ -23,6 +23,14 @@
 
 </head>
 <body>
+    
+    <!--================================= SPLASH SCREEN PAGE =================================-->
+    <div class="splashscreen" id="splashscreen" data-role="page">
+        <div class="panel">
+            <img src="images/logo.png">
+        </div>
+    </div>
+    <!--================================= (END) SPLASH SCREEN PAGE (END) =================================-->
 
     <!--================================= REGISTER PAGE =================================-->
     <div class="registerPage" id="register" data-role="page">
@@ -56,7 +64,7 @@
                 <p class="ui-title">Invalid Membership No.</p>                
                 <br />
 
-                <a id="A2" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                <a id="A2" data-role="button" data-mini="true" data-transition="none" data-theme="e" data-rel="back">OK
                 </a>
 
             </div>
@@ -97,14 +105,14 @@
                 <p class="ui-title">Invalid Code</p>                
                 <br />
 
-                <a id="A1" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                <a id="A1" data-role="button" data-mini="true" data-transition="none" data-theme="e" data-rel="back">OK
                 </a>
 
             </div>
 
         </div>
 
-        <script src="js/activate.js"></script>
+       <!-- <script src="js/activate.js"></script>-->
     </div>
     <!--================================= (END) ACTIVATION PAGE (END) =================================-->
 
@@ -136,8 +144,8 @@
         <div class="center footerMenu">
 
             <div data-role="controlgroup" data-type="horizontal">
-                <a href="#myBooking" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/calender.png"><br /><p class="tabButtonLabel">Booking</p></a>
-                <a href="#statement" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/statement.png"><br /><p class="tabButtonLabel">Statement</p></a>
+                <a href="#myBooking" class="ui-btn" data-transition="none"><img class="menuImage" src="images/icon/calender.png"><br /><p class="tabButtonLabel">Booking</p></a>
+                <a href="#statement" class="ui-btn" data-transition="none"><img class="menuImage" src="images/icon/statement.png"><br /><p class="tabButtonLabel">Statement</p></a>
             </div>
 
         </div>
@@ -148,9 +156,9 @@
     <div id="myBooking" class="myBooking" data-role="page" data-theme="a">
 
         <div data-role="header" data-position="fixed">
-            <a id="A3" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle">Power Icon</a>
+            <a id="A3" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="none">Power Icon</a>
             <h1>My Booking</h1>
-            <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle">Gear Icon</a>
+            <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="none">Gear Icon</a>
             <div class="subtitle">KLGCC</div>
         </div>
 
@@ -177,8 +185,8 @@
         <div class="center footerMenu">
 
             <div data-role="controlgroup" data-type="horizontal">
-                <a href="#golf" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/golf.png"><br /><p class="tabButtonLabel">Golf</p></a>
-                <a href="#facility" class="ui-btn" data-transition="slideup"><img class="menuImage" src="images/icon/facilities.png"><br /><p class="tabButtonLabel">Facility</p></a>
+                <a href="#golf" class="ui-btn" data-transition="none"><img class="menuImage" src="images/icon/golf.png"><br /><p class="tabButtonLabel">Golf</p></a>
+                <a href="#facility" class="ui-btn" data-transition="none"><img class="menuImage" src="images/icon/facilities.png"><br /><p class="tabButtonLabel">Facility</p></a>
             </div>
 
         </div>
@@ -191,7 +199,7 @@
                 <p class="ui-title">Booking cancellation has been done.</p>
                 <br />
 
-                <a id="cancelOK" data-role="button" data-mini="true" data-transition="flow" data-theme="e" data-rel="back">OK
+                <a id="cancelOK" data-role="button" data-mini="true" data-transition="none" data-theme="e" data-rel="back">OK
                 </a>
 
             </div>
@@ -238,10 +246,10 @@
                     <!--href="bookingConfirmed.html" -->
                     <div class="ui-grid-a">
                         <div class="ui-block-a" style="width: 50%">
-                            <a id="cancelBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="c">Yes</a>
+                            <a id="cancelBooking" data-role="button" data-mini="true" data-transition="none" data-theme="c">Yes</a>
                         </div>
                         <div class="ui-block-b" style="width: 50%">
-                            <a id="cancelNo" data-role="button" data-mini="true" data-transition="fade" data-theme="e" data-rel="back">No</a>
+                            <a id="cancelNo" data-role="button" data-mini="true" data-transition="none" data-theme="e" data-rel="back">No</a>
                         </div>
                     </div>
                 </div>
@@ -254,9 +262,9 @@
             <div id="statement" data-role="page" data-theme="a">
 
                 <div data-role="header" data-position="fixed">
-                    <a id="A5" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="turn">Power Icon</a>
+                    <a id="A5" href="#homepage" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="none">Power Icon</a>
                     <h1>Statement Info</h1>
-                    <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="turn">Gear Icon</a>
+                    <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="none">Gear Icon</a>
                     <div class="subtitle">KLGCC</div>
                 </div>
 
@@ -265,11 +273,11 @@
 
                         <tr>
                             <th>Current Oustanding</th>
-                            <td>RM 1000.00</td>
+                            <td id="outstandingAmt"></td>
                         </tr>
                         <tr>
                             <th>Payment Due Date</th>
-                            <td>12 / 12 / 2014</td>
+                            <td id="dueDate"></td>
                         </tr>
 
                     </tbody>
@@ -355,9 +363,9 @@
     <!--================================= GOLF PAGE =================================-->
     <div id="golf" class="page" data-role="page">
         <div data-role="header" data-position="fixed">
-            <a id="btnBack_GolfPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="turn">Power Icon</a>
+            <a id="btnBack_GolfPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="none">Power Icon</a>
             <h1>Golf Booking</h1>
-                        <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="turn">Gear Icon</a>
+                        <a id="A4" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="none">Gear Icon</a>
             <div class="subtitle">KLGCC</div>
         </div>
 
@@ -417,7 +425,7 @@
                     <label>Confirm Booking</label>
                 </div>
                 <div style="border-color: white; border-style: solid; border-width: 1px;">
-                    <h1 id="Confirm_Inside-Course" style="border-bottom: 1px solid white; font-size: 1em; padding-bottom: 12px;"></h1>
+                    <div id="Confirm_Inside-Course" style="border-bottom: 1px solid white; font-size: 1em; padding-bottom: 12px;"></div>
                     <div class="ui-grid-a">
                         <div class="ui-block-a" style="width: 25%">
                             <img src="images/date.png" class="BookingIcon" />
@@ -452,10 +460,10 @@
                     <!--href="bookingConfirmed.html" -->
                     <div class="ui-grid-a">
                         <div class="ui-block-a" style="width: 50%">
-                            <a id="SubmitBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="c">Yes</a>
+                            <a id="SubmitBooking" data-role="button" data-mini="true" data-transition="none" data-theme="c">Yes</a>
                         </div>
                         <div class="ui-block-b" style="width: 50%">
-                            <a id="cancelComfirm" data-role="button" data-mini="true" data-transition="fade" data-theme="e" data-rel="back">No</a>
+                            <a id="cancelComfirm" data-role="button" data-mini="true" data-transition="none" data-theme="e" data-rel="back">No</a>
                         </div>
                     </div>
                 </div>
@@ -465,14 +473,14 @@
             <div role="main" class="ui-content">
                 <h3>Success</h3>
                 <p class="ui-title" id="P1">Booking Success</p>
-                <a id="CloseSuccessBooking" data-role="button" data-mini="true" data-transition="flow" data-theme="e">OK</a>
+                <a id="CloseSuccessBooking" data-role="button" data-mini="true" data-transition="none" data-theme="e">OK</a>
             </div>
         </div>
         <div data-role="popup" id="popup_ErrMsg" data-position-to="window" data-overlay-theme="b" data-theme="a" data-dismissible="false">
             <div role="main" class="ui-content">
                 <h3>Error</h3>
                 <p class="ui-title" id="ErroMessage"></p>
-                <a id="closeErrMsg" data-role="button" data-mini="true" data-transition="flow" data-theme="e">OK</a>
+                <a id="closeErrMsg" data-role="button" data-mini="true" data-transition="none" data-theme="e">OK</a>
             </div>
         </div>
 
@@ -483,9 +491,9 @@
     <!--================================= FACILITY PAGE =================================-->
     <div id="facility" class="page" data-role="page">
         <div data-role="header" data-position="fixed">
-            <a id="btnBack_FacilityPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="turn">Power Icon</a>
+            <a id="btnBack_FacilityPage" href="#myBooking" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-notext iconstyle" data-transition="none">Power Icon</a>
             <h1>Facility Booking</h1>
-                        <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="turn">Gear Icon</a>
+                        <a id="A6" href="#homepage" class="ui-btn ui-corner-all ui-icon-home ui-btn-icon-notext iconstyle" data-transition="none">Gear Icon</a>
             <div class="subtitle">KLGCC</div>
         </div>
 
@@ -495,12 +503,7 @@
 
                 <div class="ui-grid-solo" style="width: 100%">
                     <div>
-                        <select data-native-menu="true" id="Select7" data-mini="true" data-theme="a">
-                            <option>Facilities</option>
-                            <option>Facilities 1</option>
-                            <option>Facilities 2</option>
-                            <option>Facilities 3</option>
-                            <option>Facilities 4</option>
+                        <select data-native-menu="true" id="FacilityType" data-mini="true" data-theme="a">
                         </select>
                     </div>
                 </div>
@@ -508,21 +511,16 @@
                 <fieldset class="ui-grid-a">
                     <div class="ui-block-a" style="width: 60%">
                         <div>
-                            <select id="Select5" data-native-menu="true" data-mini="true" data-theme="a">
-                                <option>Date</option>
-                                <option>11/12/2014</option>
-                                <option>12/12/2014</option>
-                                <option>13/12/2014</option>
-                                <option>14/12/2014</option>
+                            <select id="FacilityDate" data-native-menu="true" data-mini="true" data-theme="a">
                             </select>
                         </div>
                     </div>
                     <div class="ui-block-b" style="width: 40%">
                         <div>
-                            <select data-native-menu="true" name="select-multiple-5" id="select6" data-mini="true" data-theme="a">
-                                <option value="small">AM</option>
-                                <option value="medium">PM</option>
-                                <option value="large">NIGHT</option>
+                            <select data-native-menu="true" name="FacilityAMPM" id="FacilityAMPM" data-mini="true" data-theme="a">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                                <option value="NIGHT">NIGHT</option>
                             </select>
                         </div>
                     </div>
@@ -533,7 +531,7 @@
                 <div class="center" style="background-color: rgba(0,0,0,.40); left: 0; right: 0; width: 100%;">
                     <a id="btnSearchFacilities" href="#" class="ui-btn ui-btn-inline" style="background-color: transparent; border: none; padding: 0px 120px">
                         <img src="images/icon/search.png" /></a>
-                    <div class="ui-grid-solo center" id="listFacilitiesFlight" data-theme="d" style="padding: 0px;"></div>
+                    <div class="ui-grid-solo center" id="listFacilitiesTimeSlot" data-theme="d" style="padding: 0px;"></div>
 
                 </div>
                 <br />
@@ -581,10 +579,10 @@
                         <!--href="bookingConfirmed.html" -->
                         <div class="ui-grid-a">
                             <div class="ui-block-a" style="width: 50%">
-                                <a id="A7" data-role="button" data-mini="true" data-transition="flow" data-theme="c">Yes</a>
+                                <a id="A7" data-role="button" data-mini="true" data-transition="none" data-theme="c">Yes</a>
                             </div>
                             <div class="ui-block-b" style="width: 50%">
-                                <a id="A8" data-role="button" data-mini="true" data-transition="fade" data-theme="e" data-rel="back">No</a>
+                                <a id="A8" data-role="button" data-mini="true" data-transition="none" data-theme="e" data-rel="back">No</a>
                             </div>
                         </div>
                     </div>
