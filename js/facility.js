@@ -98,7 +98,7 @@ $(document).one('pagecreate', '#facility', function () {
                     $("#listFacilitiesTimeSlot").html("");
                     $.each(result, function (index, element) {
                         
-                        $("#listFacilitiesTimeSlot").append("<div align='center'>" + element.CourtCode + "</div>")
+                        $("#listFacilitiesTimeSlot").append("<div align='center'>" + element.CourtCode + "</div>");
                         $.each(result.AvailableTime, function (i, timeslot) {
                             var time = timeslot;
                             var res = time.split(" ");
