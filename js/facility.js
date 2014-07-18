@@ -60,7 +60,7 @@ function GenerateFacilityDropdownList() {
 }
 
 
-$(document).one('pagecreate', function () {
+$(document).one('pagecreate', '#facility', function () {
 
     $(".btnBack").click(function () {
         $.mobile.navigate("menu.html", { transition: "slide", info: "info about the #bar hash" });
