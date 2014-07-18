@@ -65,7 +65,7 @@ $(document).on('pagecreate', '#facility', function () {
     GenerateFacilityDateDropDownList();
 });
 $(document).one('pagecreate', '#facility', function () {
-
+    
     $(".btnBack").click(function () {
         $.mobile.navigate("menu.html", { transition: "slide", info: "info about the #bar hash" });
     });
@@ -99,7 +99,7 @@ $(document).one('pagecreate', '#facility', function () {
                     $.each(result, function (index, element) {
                         
                         $("#listFacilitiesTimeSlot").append("<div align='center'>" + element.CourtCode + "</div>");
-                        $.each(result.AvailableTime, function (i, timeslot) {
+                        $.each(element.AvailableTime, function (index, timeslot) {
                             var time = timeslot;
                             var res = time.split(" ");
                             $("#listFacilitiesTimeSlot").append("<a style='width:70px; height:' class=" + 'btnTimeSlot' + " data-role=" + 'button' + " data-theme=" + 'c' + " data-mini='true' data-corners=" + 'false' + " data-mini=" + 'true' + " data-inline=" + 'true' + " value =" + res + " time =" + res + ">" + time + "</a>").trigger("create");
