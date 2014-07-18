@@ -1,6 +1,6 @@
 ﻿
 
-function GenerateDateDropDownList() {
+function GenerateFacilityDateDropDownList() {
     var weekday = new Array(7);
     weekday[0] = "SUN";
     weekday[1] = "MON";
@@ -36,8 +36,8 @@ function GenerateDateDropDownList() {
     $('#FacilityDate').selectmenu('refresh', true);
 
 }
-function resetAvailabletime() {
-    $("#listFacilitiesFlight").html("");
+function resetFacilityTimeSlot() {
+    $("#listFacilitiesTimeSlot").html("");
 }
 function GenerateFacilityDropdownList() {
     $("#FacilityType").html("<option value='0' ClientID='0'>Facility</option>");
@@ -59,7 +59,11 @@ function GenerateFacilityDropdownList() {
     });
 }
 
-
+$(document).on('pagecreate', '#facility', function () {
+    resetFacilityTimeSlot();
+    GenerateFacilityDropdownList();
+    GenerateFacilityDateDropDownList();
+});
 $(document).one('pagecreate', '#facility', function () {
 
     $(".btnBack").click(function () {
@@ -67,7 +71,7 @@ $(document).one('pagecreate', '#facility', function () {
     });
 
     $(document).off('click', '#btnSearchFacilities').on('click', '#btnSearchFacilities', function (e) {
-        resetAvailabletime();
+        resetFacilityTimeSlot();
         date = $('#FacilityDate :selected').attr("date");
         course = $('#FacilityType :selected').attr("value");
         ClientcourseID = $('#FacilityType :selected').attr("ClientID");
