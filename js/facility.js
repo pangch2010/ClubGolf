@@ -97,9 +97,13 @@ $(document).one('pagecreate', '#facility', function () {
                 success: function (result) {
                     $("#listFacilitiesTimeSlot").html("");
                     $.each(result, function (index, element) {
-                        var time = element.time;
-                        var res = time.split(" ");
-                        $("#listFacilitiesTimeSlot").append("<a style='width:70px; height:' class=" + 'btnTimeSlot' + " data-role=" + 'button' + " data-theme=" + 'c' + " data-mini='true' data-corners=" + 'false' + " data-mini=" + 'true' + " data-inline=" + 'true' + " value =" + res + " time =" + res + ">" + time + "</a>").trigger("create");
+                        
+                        $("#listFacilitiesTimeSlot").append("<div align='center'>" + element.CourtCode + "</div>")
+                        $.each(result.time, function (index, timeslot) {
+                            var time = timeslot;
+                            var res = time.split(" ");
+                            $("#listFacilitiesTimeSlot").append("<a style='width:70px; height:' class=" + 'btnTimeSlot' + " data-role=" + 'button' + " data-theme=" + 'c' + " data-mini='true' data-corners=" + 'false' + " data-mini=" + 'true' + " data-inline=" + 'true' + " value =" + res + " time =" + res + ">" + time + "</a>").trigger("create");
+                        }
                     });
                     $("#listFacilitiesTimeSlot").append("<br/><br/>").children().last().trigger("create");
 
