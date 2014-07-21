@@ -23,7 +23,7 @@ Common.prototype.DisableScrollAfterPopup = function (pageID) {
 
 Common.prototype.navigateTo = function (pageID, changehash) {
     $.mobile.changePage(pageID, {
-        transition: "slide",
+        transition: "none",
         reverse: false,
         changeHash: changehash
     });
@@ -517,7 +517,7 @@ activate.prototype.authenticate = function (msg) {
     }).fail(function (data) {
         IsAuthenticated = false;
         $.mobile.changePage("#registerPage", {
-            transition: "flip",
+            transition: "none",
             reverse: false,
             changeHash: false
         });

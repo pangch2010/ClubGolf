@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="css/themes/clubMemberships.css">
     <script src="js/jquery.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/fastclick.js"></script>    
+    <script src="js/fastclick.js"></script>
+    <script src="js/StatementofAccount.js"></script>    
+     <script src="js/IFCAUIComponents.js"></script>   
     <script src="js/menu.js"></script>
     <script src="js/jquery.mobile-1.4.2.min.js"></script>
     <script src="js/main.js"></script>
@@ -273,17 +275,20 @@
 
                         <tr>
                             <th>Current Oustanding</th>
-                            <td id="outstandingAmt"></td>
+                            <td ><div id="outstandingAmt"></div></td>
                         </tr>
                         <tr>
                             <th>Payment Due Date</th>
-                            <td id="dueDate"></td>
+                            <td><div id="dueDate"></div></td>
                         </tr>
 
                     </tbody>
                 </table>
                 <br />
-                <ul data-role="listview" data-inset="true" class="transactionListView">
+                <div id="listviewDisplay">
+
+                </div>
+               <!-- <ul data-role="listview" data-inset="true" class="transactionListView" id="ListStatementTransaction">
                     <li data-role="list-divider">
                         <div class="ui-grid-b">
                             <div class="ui-block-a" style="width: 30%">
@@ -336,7 +341,7 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul>-->
 
             </div>
             <!--================================= (END) STATEMENT PAGE (END) =================================-->
